@@ -3,32 +3,29 @@ import type { FC } from 'react';
 interface KioskPageProps {}
 
 const KioskPage: FC<KioskPageProps> = () => {
-    return (
-      <div className='flex justify-evenly items-center py-4 px-10'>
-        <div>
-          <Sparks />
-        </div>
-        <Divider className='-rotate-90'> Status </Divider>
-        <div className='flex flex-col gap-y-20'>
-          <Monitor />
-          <Monitor />
-        </div>
+  return (
+    <div className='flex justify-around items-center py-4 px-10 md:flex-row flex-col'>
+      <div className='w-full'>
+        <Sparks />
       </div>
-    );
-}
+      <Divider className='md:-rotate-90 md:w-24'> Status </Divider>
+      <div className='flex flex-col gap-y-20 w-full'>
+        <Monitor />
+        <Monitor />
+      </div>
+    </div>
+  );
+};
 export default KioskPage;
 
 import { Card, Divider, SparkAreaChart } from '@tremor/react';
 import { data, summary } from '../assets/constants';
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
-}
+import { classNames } from '../assets/utils';
 
 function Sparks() {
   return (
     <>
-      <div className='space-y-6 sm:mx-auto sm:max-w-md'>
+      <div className='space-y-6 w-full'>
         {summary.map((stock) => (
           <Card
             key={stock.ticker}
@@ -86,7 +83,7 @@ import { trackerColors } from '../assets/constants';
 
 function Monitor() {
   return (
-    <Card className='mx-auto w-96'>
+    <Card className='mx-auto'>
       <p className='text-tremor-default flex items-center justify-between'>
         <span className='text-tremor-content-strong dark:text-dark-tremor-content-strong font-medium uppercase'>
           RN Mall Kiosk
@@ -97,7 +94,7 @@ function Monitor() {
       </p>
       <Tracker
         data={trackerColors}
-        className='mt-2'
+        className='mt-2 w-full'
       />
       <p className='text-tremor-default flex items-center justify-between pt-2'>
         <span className='text-tremor-content-strong dark:text-dark-tremor-content-strong font-medium'>
@@ -107,7 +104,7 @@ function Monitor() {
           Today
         </span>
       </p>
-      <p className='flex pt-2 items-center gap-x-2 text-sm'>
+      <div className='flex pt-2 items-center gap-x-2 text-sm'>
         <p className='h-2 w-2 ring-4 ring-green-300 bg-green-500 rounded-full animate-pulse'></p>
         <p className='ml-2 text-tremor-content-strong dark:text-dark-tremor-content-strong font-medium'>
           Running{' '}
@@ -115,7 +112,7 @@ function Monitor() {
             / Next run: 1 hour and 2 minutes
           </span>
         </p>
-      </p>
+      </div>
     </Card>
   );
 }
