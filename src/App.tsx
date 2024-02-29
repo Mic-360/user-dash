@@ -7,12 +7,13 @@ function App() {
   const [activeTab, setActiveTab] = useState('1');
   return (
     <>
-      <header className='relative top-4 w-10/12 py-6 px-4 flex justify-between items-center rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
+      <header className='relative top-4 z-10 w-11/12 py-6 px-4 flex justify-between items-center rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
         <h1 className='text-3xl font-bold text-center'>Analytics Dashboard</h1>
         <Icon
           icon={RiToolsFill}
           variant='solid'
           tooltip='Settings'
+          onClick={() => setActiveTab('settings')}
         />
       </header>
       <main className='rounded-md h-full overflow-y-scroll w-11/12 py-4 px-2 flex flex-col gap-y-4'>
@@ -21,14 +22,21 @@ function App() {
         {activeTab === '1' && <KioskPage />}
         {activeTab === '2' && <DesignPage />}
         {activeTab === '3' && <ShopPage />}
+        {activeTab === 'settings' && <SettingsPage />}
       </main>
-      <footer className='relative bottom-4 w-10/12 py-6 px-4 rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
+      <footer className='relative bottom-4 z-10 w-11/12 py-4 px-4 rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
         <p className='text-center uppercase font-medium flex justify-between items-center'>
-          <span>Twinverse Technology &copy; 2024</span>
+          <span className='hover:underline underline-offset-2'>
+            <a href='http://twinverse.in'>Twinverse Technology &copy; 2024</a>
+          </span>
           <span className='flex gap-x-2 items-center'>
-            <span>Privacy Policy</span>
+            <span className='cursor-pointer hover:underline'>
+              Privacy Policy
+            </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>Terms & Conditions</span>
+            <span className='cursor-pointer hover:underline'>
+              Terms & Conditions
+            </span>
           </span>
         </p>
       </footer>
@@ -80,6 +88,7 @@ import {
 import DesignPage from './pages/DesignPage';
 import KioskPage from './pages/KioskPage';
 import ShopPage from './pages/ShopPage';
+import SettingsPage from './pages/SettingsPage';
 
 function Badges() {
   return (

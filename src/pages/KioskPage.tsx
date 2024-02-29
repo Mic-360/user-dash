@@ -5,11 +5,14 @@ interface KioskPageProps {}
 const KioskPage: FC<KioskPageProps> = () => {
   return (
     <div className='flex justify-around items-center py-4 px-10 md:flex-row flex-col'>
-      <div className='w-full'>
+      <div className='w-full flex flex-col gap-y-6'>
+        <Sparks />
         <Sparks />
       </div>
-      <Divider className='md:-rotate-90 md:w-24'> Status </Divider>
+      <Divider className='md:-rotate-90 md:w-64'> Status </Divider>
       <div className='flex flex-col gap-y-20 w-full'>
+        <Monitor />
+        <Monitor />
         <Monitor />
         <Monitor />
       </div>
