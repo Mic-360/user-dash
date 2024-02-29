@@ -4,9 +4,12 @@ interface ShopPageProps {}
 
 const ShopPage: FC<ShopPageProps> = () => {
   return (
-    <div className='px-6 flex flex-col gap-y-4'>
+    <div className='px-6 flex flex-col gap-y-4 relative overflow-hidden'>
       <KPICards />
       <Trends />
+      <div className='-mt-96'>
+        <Typewriter />
+      </div>
     </div>
   );
 };
@@ -61,6 +64,7 @@ import {
   trendData as Tdata,
   trendSummary as summary,
 } from '../assets/constants';
+import Typewriter from '../assets/typewriter';
 
 const valueFormatter = (number: number) =>
   `$${Intl.NumberFormat('us').format(number).toString()}`;

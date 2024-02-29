@@ -19,8 +19,8 @@ function App() {
       <main className='rounded-md h-full overflow-y-scroll w-11/12 py-4 px-2 flex flex-col gap-y-4'>
         <Tabs setActiveTab={setActiveTab} />
         <Badges />
-        {activeTab === '1' && <KioskPage />}
-        {activeTab === '2' && <DesignPage />}
+        {activeTab === '1' && <DesignPage />}
+        {activeTab === '2' && <KioskPage />}
         {activeTab === '3' && <ShopPage />}
         {activeTab === 'settings' && <SettingsPage />}
       </main>
@@ -59,14 +59,14 @@ const Tabs = ({ setActiveTab }: { setActiveTab: (tab: string) => void }) => (
           value='1'
           className='text-lg px-6 py-2 uppercase tracking-wide font-medium'
         >
-          Kiosks
+          Designs
         </Tab>
         <Tab
           onClick={() => setActiveTab('2')}
           value='2'
           className='text-lg px-6 py-2 uppercase tracking-wide font-medium'
         >
-          Designs
+          Kiosks
         </Tab>
         <Tab
           onClick={() => setActiveTab('3')}
@@ -87,8 +87,8 @@ import {
 } from '@remixicon/react';
 import DesignPage from './pages/DesignPage';
 import KioskPage from './pages/KioskPage';
-import ShopPage from './pages/ShopPage';
 import SettingsPage from './pages/SettingsPage';
+import ShopPage from './pages/ShopPage';
 
 function Badges() {
   return (

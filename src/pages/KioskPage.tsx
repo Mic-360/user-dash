@@ -4,21 +4,20 @@ interface KioskPageProps {}
 
 const KioskPage: FC<KioskPageProps> = () => {
   return (
-    <div className='flex justify-around items-center py-4 px-10 md:flex-row flex-col'>
+    <div className='flex justify-between items-center py-4 px-10 md:flex-row flex-col relative overflow-hidden'>
       <div className='w-full flex flex-col gap-y-6'>
-        <Sparks />
         <Sparks />
       </div>
       <Divider className='md:-rotate-90 md:w-64'> Status </Divider>
-      <div className='flex flex-col gap-y-20 w-full'>
-        <Monitor />
-        <Monitor />
+      <div className='flex flex-col gap-y-16 w-full'>
         <Monitor />
         <Monitor />
       </div>
+      <Typewriter />
     </div>
   );
 };
+
 export default KioskPage;
 
 import { Card, Divider, SparkAreaChart } from '@tremor/react';
@@ -83,6 +82,7 @@ function Sparks() {
 
 import { Tracker } from '@tremor/react';
 import { trackerColors } from '../assets/constants';
+import Typewriter from '../assets/typewriter';
 
 function Monitor() {
   return (
