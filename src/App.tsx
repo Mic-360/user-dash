@@ -7,7 +7,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('1');
   return (
     <>
-      <header className='relative top-4 w-10/12 py-2 px-4 flex justify-between items-center rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
+      <header className='relative top-4 w-10/12 py-6 px-4 flex justify-between items-center rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
         <h1 className='text-3xl font-bold text-center'>Analytics Dashboard</h1>
         <Icon
           icon={RiToolsFill}
@@ -22,7 +22,7 @@ function App() {
         {activeTab === '2' && <DesignPage />}
         {activeTab === '3' && <ShopPage />}
       </main>
-      <footer className='relative bottom-4 w-10/12 py-2 px-4 rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
+      <footer className='relative bottom-4 w-10/12 py-6 px-4 rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
         <p className='text-center uppercase font-medium flex justify-between items-center'>
           <span>Twinverse Technology &copy; 2024</span>
           <span className='flex gap-x-2 items-center'>
@@ -49,21 +49,21 @@ const Tabs = ({ setActiveTab }: { setActiveTab: (tab: string) => void }) => (
         <Tab
           onClick={() => setActiveTab('1')}
           value='1'
-          className='text-lg px-10 py-2 uppercase tracking-wide font-medium'
+          className='text-lg px-6 py-2 uppercase tracking-wide font-medium'
         >
           Kiosks
         </Tab>
         <Tab
           onClick={() => setActiveTab('2')}
           value='2'
-          className='text-lg px-10 py-2 uppercase tracking-wide font-medium'
+          className='text-lg px-6 py-2 uppercase tracking-wide font-medium'
         >
           Designs
         </Tab>
         <Tab
           onClick={() => setActiveTab('3')}
           value='3'
-          className='text-lg px-10 py-2 uppercase tracking-wide font-medium'
+          className='text-lg px-6 py-2 uppercase tracking-wide font-medium'
         >
           Shops
         </Tab>
