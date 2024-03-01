@@ -104,7 +104,7 @@ function Badges() {
   return (
     <>
       <div className='flex flex-wrap justify-center gap-x-8'>
-        <div className='flex gap-x-4 items-center justify-center grainy rounded-lg px-2'>
+        <div className='flex gap-x-4 items-center justify-center grainy rounded-lg px-2 shadow-2xl'>
           <span className='inline-flex items-center gap-x-2 rounded-tremor-small px-2 py-1 text-tremor-label font-semibold text-emerald-700 ring-1 ring-tremor-background-emphasis dark:text-emerald-500 dark:ring-dark-tremor-ring backdrop-filter backdrop-blur-lg shadow-md'>
             <RiArrowUpSFill
               className='-ml-0.5 h-4 w-4'
@@ -116,7 +116,7 @@ function Badges() {
             Uptime
           </p>
         </div>
-        <div className='flex gap-x-4 items-center justify-center grainy rounded-lg px-2'>
+        <div className='flex gap-x-4 items-center justify-center grainy rounded-lg px-2 shadow-2xl'>
           <span className='inline-flex items-center gap-x-2 rounded-tremor-small px-2 py-1 text-tremor-label font-semibold text-red-700 ring-1 ring-tremor-background-emphasis dark:text-red-500 dark:ring-dark-tremor-ring backdrop-filter backdrop-blur-lg shadow-md'>
             <RiArrowDownSFill
               className='-ml-0.5 h-4 w-4'
@@ -128,7 +128,7 @@ function Badges() {
             Downtime
           </p>
         </div>
-        <div className='flex gap-x-4 items-center justify-center grainy rounded-lg px-2'>
+        <div className='flex gap-x-4 items-center justify-center grainy rounded-lg px-2 shadow-2xl'>
           <span className='inline-flex items-center gap-x-2 rounded-tremor-small px-2 py-1 text-tremor-label font-semibold text-gray-700 ring-1 ring-tremor-background-emphasis dark:text-gray-400 dark:ring-dark-tremor-ring backdrop-filter backdrop-blur-lg shadow-md'>
             <RiArrowRightSFill
               className='-ml-0.5 h-4 w-4'

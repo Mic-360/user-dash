@@ -21,17 +21,17 @@ import { classNames } from '../lib/utils';
 function Designs() {
   return (
     <>
-      <div className='flex items-center justify-center space-x-2'>
-        <h3 className='text-tremor-title font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong border-[0.1rem] border-black px-4 rounded-lg flex gap-x-2 items-center justify-center'>
+      <div className='flex items-center justify-center space-x-2 mt-10'>
+        <h3 className='text-tremor-title font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong border-[0.1rem] border-black px-4 rounded-lg flex gap-x-2 items-center justify-center shadow-2xl'>
           <RiShapesFill className='h-4 w-4' />
           Designs
         </h3>
-        <span className='inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-tremor-background-subtle text-tremor-label font-medium text-tremor-content-strong dark:bg-dark-tremor-background-subtle dark:text-dark-tremor-content-strong'>
+        <span className='inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-tremor-background-subtle text-tremor-label font-medium text-tremor-content-strong dark:bg-dark-tremor-background-subtle dark:text-dark-tremor-content-strong shadow-2xl'>
           {data.length}
         </span>
       </div>
-      <Divider className='my-4' />
-      <div className='mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+      <Divider />
+      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
         {data.map((member, i) => (
           <Card
             key={i}
@@ -138,13 +138,13 @@ function Graph() {
 
 const datas = [
   {
-    name: 'Top Design of the week',
+    name: 'Top Design of the Day',
     time: '23m 14s',
     change: '+6.1%',
     changeType: 'positive',
   },
   {
-    name: 'Top Design of the Day',
+    name: 'Top Design of the Week',
     time: '1h 2m 3s',
     change: '+19.2%',
     changeType: 'positive',
@@ -219,7 +219,7 @@ function TopList() {
         {datas.map((item) => (
           <Card
             key={item.name}
-            className='grainy'
+            className='grainy shadow-2xl shadow-tremor-brand'
           >
             <p className='flex items-start justify-between'>
               <span className='text-tremor-metric font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong'>
