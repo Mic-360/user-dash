@@ -35,7 +35,7 @@ function Designs() {
         {data.map((member, i) => (
           <Card
             key={i}
-            className='group p-4  shadow-2xl shadow-tremor-brand'
+            className='group p-4 grainy shadow-2xl shadow-tremor-brand'
           >
             <div className='flex items-center space-x-4'>
               <span
@@ -195,8 +195,7 @@ const object = [
   },
   {
     name: 'Cargo',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/2/22/Nike_Logo_White.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Nike_Logo.png',
     bgColor: 'bg-blue-100 dark:bg-blue-500/20',
     brand: 'Nike',
     href: '#',
@@ -218,7 +217,10 @@ function TopList() {
     <>
       <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
         {datas.map((item) => (
-          <Card key={item.name}>
+          <Card
+            key={item.name}
+            className='grainy'
+          >
             <p className='flex items-start justify-between'>
               <span className='text-tremor-metric font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong'>
                 {item.time}
@@ -242,7 +244,7 @@ function TopList() {
         {object.map((member, i) => (
           <Card
             key={i}
-            className='group p-4  shadow-2xl shadow-tremor-brand'
+            className='group p-4 grainy shadow-2xl shadow-tremor-brand'
           >
             <div className='flex items-center space-x-4'>
               <span

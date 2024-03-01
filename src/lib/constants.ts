@@ -697,7 +697,7 @@ const designData = [
     },
     {
         name: 'Cargo',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Nike_Logo_White.png',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Nike_Logo.png',
         bgColor: 'bg-blue-100 dark:bg-blue-500/20',
         brand: 'Nike',
         href: '#',
@@ -816,7 +816,7 @@ const designData = [
     },
     {
         name: 'Cargo',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Nike_Logo_White.png',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Nike_Logo.png',
         bgColor: 'bg-blue-100 dark:bg-blue-500/20',
         brand: 'Nike',
         href: '#',
