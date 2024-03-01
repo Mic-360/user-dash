@@ -16,8 +16,8 @@ const ShopPage: FC<ShopPageProps> = () => {
 export default ShopPage;
 
 import { Card } from '@tremor/react';
-import { KPIdata as data } from '../assets/constants';
-import { classNames } from '../assets/utils';
+import { KPIdata as data } from '../lib/constants';
+import { classNames } from '../lib/utils';
 
 function KPICards() {
   return (
@@ -60,11 +60,8 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@tremor/react';
-import {
-  trendData as Tdata,
-  trendSummary as summary,
-} from '../assets/constants';
-import Typewriter from '../assets/typewriter';
+import Typewriter from '../components/typewriter';
+import { trendData as Tdata, trendSummary as summary } from '../lib/constants';
 
 const valueFormatter = (number: number) =>
   `$${Intl.NumberFormat('us').format(number).toString()}`;

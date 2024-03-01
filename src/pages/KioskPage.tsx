@@ -21,8 +21,8 @@ const KioskPage: FC<KioskPageProps> = () => {
 export default KioskPage;
 
 import { Card, Divider, SparkAreaChart } from '@tremor/react';
-import { data, summary } from '../assets/constants';
-import { classNames } from '../assets/utils';
+import { data, summary } from '../lib/constants';
+import { classNames } from '../lib/utils';
 
 function Sparks() {
   return (
@@ -81,8 +81,8 @@ function Sparks() {
 }
 
 import { Tracker } from '@tremor/react';
-import { trackerColors } from '../assets/constants';
-import Typewriter from '../assets/typewriter';
+import Typewriter from '../components/typewriter';
+import { trackerColors } from '../lib/constants';
 
 function Monitor() {
   return (

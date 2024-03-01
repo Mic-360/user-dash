@@ -679,203 +679,288 @@ const trendSummary = [
 
 const designData = [
     {
-        name: 'Alissia Stone',
-        initial: 'AS',
-        textColor: 'text-fuchsia-800 dark:text-fuchsia-500',
+        name: 'Jeans',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Levi%27s_logo.svg',
         bgColor: 'bg-fuchsia-100 dark:bg-fuchsia-500/20',
-        email: 'a.stone@gmail.com',
+        brand: 'Levi\'s',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'member',
+                type: 'Type',
+                value: 'Jeans',
             },
             {
-                type: 'Last active',
-                value: '2d ago',
+                type: 'Active Time',
+                value: '2h',
             },
         ],
     },
     {
-        name: 'Emma Bern',
-        initial: 'EB',
-        textColor: 'text-blue-800 dark:text-blue-500',
+        name: 'Cargo',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Nike_Logo_White.png',
         bgColor: 'bg-blue-100 dark:bg-blue-500/20',
-        email: 'e.bern@gmail.com',
+        brand: 'Nike',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'member',
+                type: 'Type',
+                value: 'Cargo',
             },
             {
-                type: 'Last active',
-                value: '1d ago',
+                type: 'Active Time',
+                value: '1h',
             },
         ],
     },
     {
-        name: 'Aaron McFlow',
-        initial: 'AM',
-        textColor: 'text-pink-800 dark:text-pink-500',
+        name: 'Shirt',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg',
         bgColor: 'bg-pink-100 dark:bg-pink-500/20',
-        email: 'a.flow@acme.com',
+        brand: 'Adidas',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'admin',
+                type: 'Type',
+                value: 'Shirt',
             },
             {
-                type: 'Last active',
-                value: '2min ago',
+                type: 'Active Time',
+                value: '2m',
             },
         ],
     },
     {
-        name: 'Thomas Palstein',
-        initial: 'TP',
-        textColor: 'text-emerald-800 dark:text-emerald-500',
+        name: 'T-shirt',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/8/88/Puma-Logo.png',
         bgColor: 'bg-emerald-100 dark:bg-emerald-500/20',
-        email: 't.palstein@acme.com',
+        brand: 'Puma',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'admin',
+                type: 'Type',
+                value: 'T-shirt',
             },
             {
-                type: 'Last active',
-                value: '18min ago',
+                type: 'Active Time',
+                value: '18m',
             },
         ],
     },
     {
-        name: 'Sarah Johnson',
-        initial: 'SJ',
-        textColor: 'text-orange-800 dark:text-orange-500',
+        name: 'Trousers',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Gucci_Logo.svg',
         bgColor: 'bg-orange-100 dark:bg-orange-500/20',
-        email: 's.johnson@gmail.com',
+        brand: 'Gucci',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'member',
+                type: 'Type',
+                value: 'Trousers',
             },
             {
-                type: 'Last active',
-                value: '3h ago',
+                type: 'Active Time',
+                value: '3h',
             },
         ],
     },
     {
-        name: 'David Smith',
-        initial: 'DS',
-        textColor: 'text-indigo-800 dark:text-indigo-500',
+        name: 'Hoodies',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Calvin_klein_logo.svg',
         bgColor: 'bg-indigo-100 dark:bg-indigo-500/20',
-        email: 'd.smith@gmail.com',
+        brand: 'Calvin Klein',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'guest',
+                type: 'Type',
+                value: 'Hoodies',
             },
             {
-                type: 'Last active',
-                value: '4h ago',
+                type: 'Active Time',
+                value: '4h',
             },
         ],
     },
     {
-        name: 'Megan Brown',
-        initial: 'MB',
-        textColor: 'text-yellow-800 dark:text-yellow-500',
+        name: 'Jeans',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Tommy_Hilfiger_Logo.png',
         bgColor: 'bg-yellow-100 dark:bg-yellow-500/20',
-        email: 'm.brown@gmail.com',
+        brand: 'Tommy Hilfiger',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'admin',
+                type: 'Type',
+                value: 'Jeans',
             },
             {
-                type: 'Last active',
-                value: '1d ago',
+                type: 'Active Time',
+                value: '12m',
             },
         ],
     },
     {
-        name: 'Alissia Stone',
-        initial: 'AS',
-        textColor: 'text-fuchsia-800 dark:text-fuchsia-500',
+        name: 'Jeans',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Levi%27s_logo.svg',
         bgColor: 'bg-fuchsia-100 dark:bg-fuchsia-500/20',
-        email: 'a.stone@gmail.com',
+        brand: 'Levi\'s',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'member',
+                type: 'Type',
+                value: 'Jeans',
             },
             {
-                type: 'Last active',
-                value: '2d ago',
+                type: 'Active Time',
+                value: '20s',
             },
         ],
     },
     {
-        name: 'Emma Bern',
-        initial: 'EB',
-        textColor: 'text-blue-800 dark:text-blue-500',
+        name: 'Cargo',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Nike_Logo_White.png',
         bgColor: 'bg-blue-100 dark:bg-blue-500/20',
-        email: 'e.bern@gmail.com',
+        brand: 'Nike',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'member',
+                type: 'Type',
+                value: 'Cargo',
             },
             {
-                type: 'Last active',
-                value: '1d ago',
+                type: 'Active Time',
+                value: '1h',
             },
         ],
     },
     {
-        name: 'Aaron McFlow',
-        initial: 'AM',
-        textColor: 'text-pink-800 dark:text-pink-500',
+        name: 'Shirt',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg',
         bgColor: 'bg-pink-100 dark:bg-pink-500/20',
-        email: 'a.flow@acme.com',
+        brand: 'Adidas',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'admin',
+                type: 'Type',
+                value: 'Shirt',
             },
             {
-                type: 'Last active',
-                value: '2min ago',
+                type: 'Active Time',
+                value: '2m',
             },
         ],
     },
     {
-        name: 'Thomas Palstein',
-        initial: 'TP',
-        textColor: 'text-emerald-800 dark:text-emerald-500',
+        name: 'T-shirt',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/8/88/Puma-Logo.png',
         bgColor: 'bg-emerald-100 dark:bg-emerald-500/20',
-        email: 't.palstein@acme.com',
+        brand: 'Puma',
         href: '#',
         details: [
             {
-                type: 'Role',
-                value: 'admin',
+                type: 'Type',
+                value: 'T-shirt',
             },
             {
-                type: 'Last active',
-                value: '18min ago',
+                type: 'Active Time',
+                value: '61s',
             },
         ],
+    },
+].map((item) => {
+    const activeTime = item.details.find((detail) => {
+        if (detail.type === 'Active Time') {
+            return detail;
+        }
+    });
+
+    if (activeTime) {
+        const timeValue = activeTime.value;
+        const timeUnit = timeValue.slice(-1);
+        const timeNumber = parseInt(timeValue.slice(0, -1));
+        let minutes = 0;
+        let seconds = 0;
+        let hours = 0;
+        if (timeUnit === 'h') {
+            hours = timeNumber;
+        } else if (timeUnit === 'm') {
+            minutes = timeNumber;
+        } else if (timeUnit === 's') {
+            seconds = timeNumber;
+        }
+        if (seconds > 60) {
+            minutes += Math.floor(seconds / 60);
+            seconds = seconds % 60;
+        }
+        if (minutes > 60) {
+            hours += Math.floor(minutes / 60);
+            minutes = minutes % 60;
+        }
+        activeTime.value = `${hours}h ${minutes}min ${seconds}s`;
+    }
+    return item;
+});
+
+const graphData = [
+    {
+        ViewsOn: 'Jan 23',
+        Current: 232,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'Feb 23',
+        Current: 241,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'Mar 23',
+        Current: 291,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'Apr 23',
+        Current: 101,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'May 23',
+        Current: 318,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'Jun 23',
+        Current: 205,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'Jul 23',
+        Current: 372,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'Aug 23',
+        Current: 341,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'Sep 23',
+        Current: 387,
+        Previous: 120,
+    },
+    {
+        ViewsOn: 'Oct 23',
+        Current: 220,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'Nov 23',
+        Current: 372,
+        Previous: 0,
+    },
+    {
+        ViewsOn: 'Dec 23',
+        Current: 321,
+        Previous: 0,
     },
 ];
 
-export { data, summary, trackerColors, KPIdata, trendData, trendSummary, designData};
+
+export { KPIdata, data, designData, summary, trackerColors, trendData, trendSummary, graphData };
