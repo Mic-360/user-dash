@@ -1,139 +1,11 @@
-import { RiShapesFill } from '@remixicon/react';
 import type { FC } from 'react';
-
-interface DesignPageProps {}
-
-const DesignPage: FC<DesignPageProps> = () => {
-  return (
-    <div className='px-8 py-4 flex flex-col gap-y-6'>
-      <TopList />
-      <Designs />
-    </div>
-  );
-};
-export default DesignPage;
-
-import { RiArrowRightUpLine } from '@remixicon/react';
-import { Card, Divider } from '@tremor/react';
-import { designData as data } from '../lib/constants';
+// import DesignPage from './DesignPage';
+import { Card } from '@tremor/react';
 import { classNames } from '../lib/utils';
+import { RiArrowRightUpLine } from '@remixicon/react';
 
-const Designs = () => {
-  return (
-    <>
-      <div className='flex items-center justify-center space-x-2 mt-10'>
-        <h3 className='text-tremor-title font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong border-[0.1rem] border-black px-4 rounded-lg flex gap-x-2 items-center justify-center shadow-2xl'>
-          <RiShapesFill className='h-4 w-4' />
-          Designs
-        </h3>
-        <span className='inline-flex h-6 w-6 items-center justify-center rounded-tremor-full bg-tremor-background-subtle text-tremor-label font-medium text-tremor-content-strong dark:bg-dark-tremor-background-subtle dark:text-dark-tremor-content-strong shadow-2xl'>
-          {data.length}
-        </span>
-      </div>
-      <Divider />
-      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-        {data.map((member, i) => (
-          <Card
-            key={i}
-            className='group p-4 grainy shadow-2xl shadow-tremor-brand'
-          >
-            <div className='flex items-center space-x-4'>
-              <span
-                className={classNames(
-                  member.bgColor,
-                  'flex h-12 w-12 shrink-0 items-center justify-center rounded-tremor-full text-tremor-default font-medium'
-                )}
-                aria-hidden='true'
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                />
-              </span>
-              <div className='truncate'>
-                <p className='truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong'>
-                  <a
-                    href={member.href}
-                    className='focus:outline-none'
-                  >
-                    {/* Extend link to entire card */}
-                    <span
-                      className='absolute inset-0'
-                      aria-hidden='true'
-                    />
-                    Name of {member.name}
-                  </a>
-                </p>
-                <p className='truncate text-tremor-default text-tremor-content dark:text-dark-tremor-content'>
-                  {member.brand}
-                </p>
-              </div>
-            </div>
-            <div className='mt-6 grid grid-cols-2 divide-x divide-tremor-border border-t border-tremor-border dark:divide-dark-tremor-border dark:border-dark-tremor-border'>
-              {member.details.map((item) => (
-                <div
-                  key={item.type}
-                  className='truncate px-3 py-2'
-                >
-                  <p className='truncate text-tremor-label text-tremor-content dark:text-dark-tremor-content'>
-                    {item.type}
-                  </p>
-                  <p className='truncate text-tremor-default font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong'>
-                    {item.value}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <span
-              className='pointer-events-none absolute right-4 top-4 text-tremor-content-subtle group-hover:text-tremor-content dark:text-dark-tremor-content-subtle group-hover:dark:text-dark-tremor-content'
-              aria-hidden='true'
-            >
-              <RiArrowRightUpLine
-                className='h-4 w-4'
-                aria-hidden='true'
-              />
-            </span>
-            <Graph />
-          </Card>
-        ))}
-      </div>
-    </>
-  );
-}
-
-import { AreaChart } from '@tremor/react';
-import { graphData } from '../lib/constants';
-
-const valueFormatter = (number: number) =>
-  `${Intl.NumberFormat('us').format(number).toString()}`;
-
-const Graph = () => {
-  const Data = graphData.map((item) => ({
-    ...item,
-    Current: Math.floor(Math.random() * 100),
-    Previous: Math.floor(Math.random() * 100),
-  }));
-
-  return (
-    <Card className='sm:mx-auto sm:max-w-xl mt-2 shadow-2xl shadow-tremor-brand'>
-      <h3 className='font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong'>
-        Views
-      </h3>
-      <AreaChart
-        data={Data}
-        index='ViewsOn'
-        categories={['Current', 'Previous']}
-        colors={['blue', 'violet']}
-        valueFormatter={valueFormatter}
-        showLegend={true}
-        showYAxis={false}
-        showGradient={true}
-        showGridLines={false}
-        startEndOnly={true}
-        className='h-32'
-      />
-    </Card>
-  );
+interface DataPageProps {
+  activeTab: string;
 }
 
 const datas = [
@@ -212,7 +84,8 @@ const object = [
   },
 ];
 
-const TopList = () => {
+const DataPage: FC<DataPageProps> = ({ activeTab }) => {
+    
   return (
     <>
       <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
@@ -306,4 +179,5 @@ const TopList = () => {
       </div>
     </>
   );
-}
+};
+export default DataPage;

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('1');
+  const [activeTab, setActiveTab] = useState('M');
   return (
     <>
       <header className='relative top-4 z-10 w-11/12 py-6 px-4 flex justify-between items-center rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
@@ -28,10 +28,7 @@ function App() {
       </header>
       <main className='rounded-md h-full overflow-y-scroll w-11/12 py-4 px-2 flex flex-col gap-y-4'>
         <Tabs setActiveTab={setActiveTab} />
-        <Badges />
-        {activeTab === '1' && <DesignPage />}
-        {activeTab === '2' && <KioskPage />}
-        {activeTab === '3' && <ShopPage />}
+        <DataPage activeTab={activeTab} />
         {activeTab === 'settings' && <SettingsPage />}
       </main>
       <footer className='relative bottom-4 z-10 w-11/12 py-4 px-4 rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
@@ -65,25 +62,25 @@ const Tabs = ({ setActiveTab }: { setActiveTab: (tab: string) => void }) => (
         defaultValue='1'
       >
         <Tab
-          onClick={() => setActiveTab('1')}
+          onClick={() => setActiveTab('M')}
           value='1'
           className='text-lg px-6 py-2 uppercase tracking-wide font-medium'
         >
-          Designs
+          Kiosk(M)
         </Tab>
         <Tab
-          onClick={() => setActiveTab('2')}
+          onClick={() => setActiveTab('T')}
           value='2'
           className='text-lg px-6 py-2 uppercase tracking-wide font-medium'
         >
-          Kiosks
+          Kiosk(T)
         </Tab>
         <Tab
-          onClick={() => setActiveTab('3')}
+          onClick={() => setActiveTab('W')}
           value='3'
           className='text-lg px-6 py-2 uppercase tracking-wide font-medium'
         >
-          Shops
+          Kiosk(W)
         </Tab>
       </TabList>
     </TabGroup>
@@ -96,9 +93,8 @@ import {
   RiArrowUpSFill,
 } from '@remixicon/react';
 import DesignPage from './pages/DesignPage';
-import KioskPage from './pages/KioskPage';
 import SettingsPage from './pages/SettingsPage';
-import ShopPage from './pages/ShopPage';
+import DataPage from './pages/DataPage';
 
 function Badges() {
   return (
