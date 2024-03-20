@@ -865,39 +865,7 @@ const designData = [
             },
         ],
     },
-].map((item) => {
-    const activeTime = item.details.find((detail) => {
-        if (detail.type === 'Active Time') {
-            return detail;
-        }
-    });
-
-    if (activeTime) {
-        const timeValue = activeTime.value;
-        const timeUnit = timeValue.slice(-1);
-        const timeNumber = parseInt(timeValue.slice(0, -1));
-        let minutes = 0;
-        let seconds = 0;
-        let hours = 0;
-        if (timeUnit === 'h') {
-            hours = timeNumber;
-        } else if (timeUnit === 'm') {
-            minutes = timeNumber;
-        } else if (timeUnit === 's') {
-            seconds = timeNumber;
-        }
-        if (seconds > 60) {
-            minutes += Math.floor(seconds / 60);
-            seconds = seconds % 60;
-        }
-        if (minutes > 60) {
-            hours += Math.floor(minutes / 60);
-            minutes = minutes % 60;
-        }
-        activeTime.value = `${hours}h ${minutes}min ${seconds}s`;
-    }
-    return item;
-});
+]
 
 const graphData = [
     {

@@ -7,7 +7,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('M');
   return (
     <>
-      <header className='relative top-4 z-10 w-11/12 py-6 px-4 flex justify-between items-center rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
+      <header className='relative top-4 z-10 w-11/12 py-6 px-4 flex justify-between items-center rounded-lg bg-opacity-50 border-[0.1rem] border-gray-200 shadow-md grainy'>
         <a
           href='/'
           className='border-2 rounded-full p-[0.125rem] animate-pulse'
@@ -31,7 +31,7 @@ function App() {
         <DataPage activeTab={activeTab} />
         {activeTab === 'settings' && <SettingsPage />}
       </main>
-      <footer className='relative bottom-4 z-10 w-11/12 py-4 px-4 rounded-lg bg-opacity-10 border-[0.1rem] border-gray-200 backdrop-filter backdrop-blur-lg shadow-md'>
+      <footer className='relative bottom-4 z-10 w-11/12 py-4 px-4 rounded-lg bg-opacity-50 border-[0.1rem] border-gray-200 shadow-md grainy'>
         <p className='text-center uppercase font-medium flex justify-between items-center'>
           <span className='hover:text-gray-600'>
             <a href='http://twinverse.in'>Twinverse Technology &copy; 2024</a>
@@ -92,9 +92,9 @@ import {
   RiArrowRightSFill,
   RiArrowUpSFill,
 } from '@remixicon/react';
-import DesignPage from './pages/DesignPage';
-import SettingsPage from './pages/SettingsPage';
 import DataPage from './pages/DataPage';
+import SettingsPage from './pages/SettingsPage';
+import DesignPage from './pages/DesignPage';
 
 function Badges() {
   return (
