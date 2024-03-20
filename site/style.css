@@ -1,0 +1,94 @@
+/* The body of the document */
+body {
+    /* Set the background color to black */
+    background-color: #000000;
+    /* Set the font family to Arial, sans-serif */
+    font-family: Arial, sans-serif;
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 0;
+    /* Set the height to 100% of the viewport height */
+    height: 100vh;
+    /* Use CSS Grid for layout */
+    display: grid;
+    /* Align grid items to the start */
+    place-items: start;
+    /* Hide overflow content */
+    overflow: hidden;
+}
+
+/* Direct child div of the body */
+body > div {
+    /* Use Flexbox for layout */
+    display: flex;
+    /* Stack items vertically */
+    flex-direction: column;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Set width to 100% */
+    width: 100%;
+    /* Center text */
+    text-align: center;
+    /* Add space between items */
+    gap: 2rem;
+}
+
+/* Direct child div of the div which is a direct child of the body */
+body > div > div {
+    /* Use Flexbox for layout */
+    display: flex;
+    /* Add space between items */
+    gap: 2rem;
+    /* Center text */
+    text-align: center;
+}
+
+/* Heading 1 */
+h1 {
+    /* Set font size to 5rem */
+    font-size: 5rem;
+    /* Add margin to the bottom */
+    margin-bottom: 1rem;
+    /* Set color to white */
+    color: #ffffff;
+    /* Add letter spacing */
+    letter-spacing: .2cap;
+}
+
+/* Button */
+button {
+    /* Set padding */
+    padding: .8rem 1.5rem;
+    /* Set font size */
+    font-size: 1rem;
+    /* Add letter spacing */
+    letter-spacing: .25cap;
+    /* Set color to white */
+    color: #ffffff;
+    /* Set background color to transparent */
+    background-color: transparent;
+    /* Add border */
+    border: 3px solid grey;
+    /* Add border radius */
+    border-radius: 1rem;
+    /* Change cursor to pointer on hover */
+    cursor: pointer;
+    /* Add transition effect */
+    transition: all 0.3s ease;
+}
+
+/* Button on hover */
+button:hover {
+    /* Change background color to whitesmoke on hover */
+    background-color: whitesmoke;
+    /* Change color to black on hover */
+    color: #000000;
+}
+
+/* Paragraph */
+p {
+    /* Set color to white */
+    color: #ffffff;
+}
